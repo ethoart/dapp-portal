@@ -9,11 +9,6 @@ import type { Chain } from "@wagmi/core/chains";
 const portalRuntimeConfig = usePortalRuntimeConfig();
 
 export const l1Networks = {
-  mainnet: {
-    ...mainnet,
-    name: "Ethereum",
-    network: "mainnet",
-  },
   sepolia: {
     ...sepolia,
     name: "Ethereum Sepolia Testnet",
@@ -41,19 +36,19 @@ export type ZkSyncNetwork = {
 // Also see the guide in the README.md file in the root of the repository.
 
 // In-memory node default config. Docs: https://era.zksync.io/docs/tools/testing/era-test-node.html
-export const inMemoryNode: ZkSyncNetwork = {
-  id: 260,
+export const inMemoryNode: FashionChain = {
+  id: 8383,
   key: "in-memory-node",
   name: "In-memory node",
-  rpcUrl: "http://localhost:8011",
+  rpcUrl: "https://rpcnode.fashionchain-zk-0e259f.zeeve.online/fP88b1YhYFUy1DPZcKIo/rpc",
 };
 
 // Dockerized local setup default config. Docs: https://era.zksync.io/docs/tools/testing/dockerized-testing.html
-export const dockerizedNode: ZkSyncNetwork = {
-  id: 270,
+export const dockerizedNode: Fashionchain = {
+  id: 8383,
   key: "dockerized-node",
   name: "Dockerized local node",
-  rpcUrl: "http://localhost:3050",
+  rpcUrl: "https://rpcnode.fashionchain-zk-0e259f.zeeve.online/fP88b1YhYFUy1DPZcKIo/rpc",
   l1Network: {
     id: 9,
     name: "Ethereum Local Node",
@@ -66,25 +61,15 @@ export const dockerizedNode: ZkSyncNetwork = {
 };
 
 const publicChains: ZkSyncNetwork[] = [
-  {
-    id: 324,
-    key: "mainnet",
-    name: "zkSync",
-    rpcUrl: "https://mainnet.era.zksync.io",
-    blockExplorerUrl: "https://era.zksync.network",
-    blockExplorerApi: "https://block-explorer-api.mainnet.zksync.io",
-    displaySettings: {
-      showPartnerLinks: true,
-    },
-    l1Network: l1Networks.mainnet,
+
   },
   {
-    id: 300,
-    key: "sepolia",
-    name: "zkSync Sepolia Testnet",
-    rpcUrl: "https://sepolia.era.zksync.dev",
-    blockExplorerUrl: "https://sepolia-era.zksync.network",
-    blockExplorerApi: "https://block-explorer-api.sepolia.zksync.dev",
+    id: 8383,
+    key: "Fashionchain",
+    name: "fashionchain Sepolia Testnet",
+    rpcUrl: "https://rpcnode.fashionchain-zk-0e259f.zeeve.online/fP88b1YhYFUy1DPZcKIo/rpc",
+    blockExplorerUrl: "",
+    blockExplorerApi: "",
     displaySettings: {
       showPartnerLinks: true,
     },
