@@ -1,1 +1,29 @@
-[]
+[
+  {
+    "network": {
+      "id": 8383,
+      "key": "FashionChain",
+      "name": "Fashionchain Testnet",
+      "rpcUrl": "https://rpcnode.fashionchain-zk-0e259f.zeeve.online/fP88b1YhYFUy1DPZcKIo/rpc",
+      "l1Network": {
+        "id": 11155111,
+        "name": "sepolia",
+        "network": "Ethereum sepolia",
+        "nativeCurrency": { "name": "Ether", "symbol": "ETH", "decimals": 18 },
+        "rpcUrls": {
+          "default": { "http": ["sepolia.infura.io"] },
+          "public": { "http": ["sepolia.infura.io"] }
+        }
+      }
+    },
+    "tokens": [
+      {
+        "address": "0x000000000000000000000000000000000000800A",
+        "l1Address": "0x0000000000000000000000000000000000000000",
+        "symbol": "ETH",
+        "decimals": 18,
+        "iconUrl": "/img/eth.svg"
+      }
+    ]
+  }
+]
